@@ -20,6 +20,8 @@ The home hero background is set in `css/style.css` (search for `hero.svg`).
 
 **Watches.** In `collection.html`, each watch is one `<article class="product">` block. Copy a block to add a watch, or delete one to remove it. The home page shows three featured watches in the same format.
 
+**Pre-order buttons.** Each watch has a "Pre-order" button that opens the visitor's email app with a message to you, already filled in with the watch name and price. When you add or rename a watch, update the name and price inside that button's link too (the `subject=` and `body=` parts, where spaces are written as `%20`).
+
 **Text.** Search the HTML for "placeholder" to find the copy written as placeholder text. Also update the email address `hello@vaurelwatches.com`, the phone number and the address.
 
 **Colours & fonts.** Edit the variables at the top of `css/style.css` (`--gold`, `--black`, etc.).
