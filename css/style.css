@@ -151,7 +151,7 @@ p { margin: 0 0 1.25rem; }
   font-family: var(--font-display);
   font-size: 1.75rem;
   letter-spacing: 0.4em;
-  color: var(--white);
+  color: var(--gold);
   /* Optical balance for the trailing letter-spacing */
   margin-right: -0.4em;
 }
@@ -1007,6 +1007,13 @@ body.bag-open { overflow: hidden; }
 /* ==========================================================================
    Responsive
    ========================================================================== */
+
+/* Medium screens: tighter menu so all links fit beside the logo */
+@media (min-width: 821px) and (max-width: 1100px) {
+  .nav-list,
+  .header-actions { gap: 1.5rem; }
+  .nav-list a { letter-spacing: 0.18em; }
+}
 
 @media (max-width: 960px) {
   .grid { grid-template-columns: repeat(2, 1fr); }

@@ -7,7 +7,9 @@ A static website for Vaurel watches, built with plain HTML, CSS and a little Jav
 | File              | Page                                          |
 | ----------------- | --------------------------------------------- |
 | `index.html`      | Home: hero, brand story, featured watches     |
-| `collection.html` | Collection: grid of watches (photo, name, price) |
+| `men.html`        | Shop Men: the men's collection                |
+| `women.html`      | Shop Women: the women's collection            |
+| `collection.html` | Full collection: men's and women's together   |
 | `about.html`      | About: story, craft, values                   |
 | `contact.html`    | Contact: form, email, phone, address          |
 | `checkout.html`   | Checkout: customer details and order summary  |
@@ -34,6 +36,10 @@ The home hero and About page header still use placeholder images (`images/hero.s
 Pressing **Pre-order** adds the watch to the visitor's bag (saved in their browser) and opens the bag panel. The bag icon in the header shows the number of items. **Checkout** collects the customer's details, and **Place Pre-order** opens their email app with the full order addressed to you. No payment is taken on the site.
 
 To change where orders are sent, edit `ORDER_EMAIL` at the top of `js/cart.js`. To take payments on the site later, the bag can be connected to a service such as Stripe Payment Links or Shopify.
+
+## Making sure visitors see your latest changes
+
+Each page loads `css/style.css?v=5` and `js/...js?v=5`. After changing the CSS or JavaScript files, raise that number in every `.html` file (e.g. to `?v=6`). Browsers then fetch the new files instead of mixing in old saved copies.
 
 ## Contact form
 

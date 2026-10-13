@@ -128,7 +128,7 @@
     root.innerHTML =
       '<nav class="breadcrumb" aria-label="Breadcrumb">' +
         '<a href="collection.html">Collection</a><span aria-hidden="true">/</span>' +
-        '<a href="collection.html#' + product.collection + '">' + label + '</a><span aria-hidden="true">/</span>' +
+        '<a href="' + product.collection + '.html">' + label + '</a><span aria-hidden="true">/</span>' +
         '<span aria-current="page">' + name + "</span>" +
       "</nav>" +
       '<div class="product-detail">' +
@@ -146,6 +146,10 @@
           (details ? '<dl class="spec-list">' + details + "</dl>" : "") +
         "</div>" +
       "</div>";
+
+    // Highlight "Shop Men" or "Shop Women" in the menu
+    var navLink = document.querySelector('.nav-list a[href="' + product.collection + '.html"]');
+    if (navLink) navLink.setAttribute("aria-current", "page");
 
     setUpGallery(root);
     return product;
