@@ -24,7 +24,27 @@
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(items)); } catch (e) { /* private mode: bag lasts for this page only */ }
   }
 
-  var items = load();
+  // Keep saved bags in line with js/products.js: drop watches that no longer
+  // exist and pick up any new name, price or photo.
+  function syncWithCatalogue(list) {
+    var catalogue = window.VAUREL_PRODUCTS;
+    if (!catalogue) return list;
+    return list.reduce(function (kept, item) {
+      var product = catalogue.filter(function (p) { return p.id === item.id; })[0];
+      if (product) {
+        kept.push({
+          id: product.id,
+          name: product.name,
+          price: product.price,
+          image: "images/watches/" + product.id + "/" + product.angles[0] + "-sm.jpg",
+          qty: item.qty
+        });
+      }
+      return kept;
+    }, []);
+  }
+
+  var items = syncWithCatalogue(load());
 
   /* ---------- Bag actions ---------- */
   function find(id) {
@@ -232,6 +252,7 @@
 
   /* ---------- Wire everything up ---------- */
   function init() {
+    save(); // store the catalogue-synced bag
     buildDrawer();
     render();
     setUpCheckout();
@@ -287,7 +308,7 @@
 
     // Keep the bag in sync if it changes in another tab
     window.addEventListener("storage", function (event) {
-      if (event.key === STORAGE_KEY) { items = load(); render(); }
+      if (event.key === STORAGE_KEY) { items = syncWithCatalogue(load()); render(); }
     });
   }
 
