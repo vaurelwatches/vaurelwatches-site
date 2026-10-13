@@ -428,6 +428,22 @@ p { margin: 0 0 1.25rem; }
   margin: 0;
 }
 
+.product-btn {
+  display: block;
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.9rem 1rem;
+  text-align: center;
+}
+
+.page-note {
+  margin-top: 1.5rem !important;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold) !important;
+}
+
 /* ---------- Call to action band ---------- */
 .cta {
   text-align: center;
