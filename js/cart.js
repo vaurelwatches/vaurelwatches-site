@@ -35,6 +35,7 @@
         kept.push({
           id: product.id,
           name: product.name,
+          variant: product.collection === "women" ? "Women\u2019s" : "Men\u2019s",
           price: product.price,
           image: "images/watches/" + product.id + "/" + product.angles[0] + "-sm.jpg",
           qty: item.qty
@@ -55,7 +56,7 @@
   function add(product) {
     var existing = find(product.id);
     if (existing) existing.qty += 1;
-    else items.push({ id: product.id, name: product.name, price: product.price, image: product.image, qty: 1 });
+    else items.push({ id: product.id, name: product.name, variant: product.variant, price: product.price, image: product.image, qty: 1 });
     commit();
   }
 
@@ -104,6 +105,7 @@
         '<img src="' + escapeHtml(item.image) + '" alt="" width="80" height="100">' +
         '<div class="bag-item-info">' +
           '<p class="bag-item-name">' + name + "</p>" +
+          (item.variant ? '<p class="bag-item-variant">' + escapeHtml(item.variant) + "</p>" : "") +
           '<p class="bag-item-price">' + money.format(item.price) + "</p>" +
           '<div class="qty">' +
             '<button type="button" data-qty="-1" aria-label="Decrease quantity of ' + name + '">&minus;</button>' +
@@ -218,7 +220,7 @@
 
       var data = new FormData(form);
       var lines = items.map(function (item) {
-        return "- " + item.name + " x " + item.qty + "  (" + money.format(item.price * item.qty) + ")";
+        return "- " + item.name + (item.variant ? " (" + item.variant + ")" : "") + " x " + item.qty + "  (" + money.format(item.price * item.qty) + ")";
       });
       var body = [
         "New pre-order",
@@ -264,6 +266,7 @@
         add({
           id: addBtn.dataset.id,
           name: addBtn.dataset.name,
+          variant: addBtn.dataset.variant,
           price: Number(addBtn.dataset.price),
           image: addBtn.dataset.image
         });

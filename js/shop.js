@@ -18,6 +18,10 @@
     return "images/watches/" + product.id + "/" + angle + (small ? "-sm" : "") + ".jpg";
   }
 
+  function collectionLabel(product) {
+    return product.collection === "women" ? "Women\u2019s" : "Men\u2019s";
+  }
+
   function pageUrl(product) {
     return "product.html?id=" + encodeURIComponent(product.id);
   }
@@ -28,9 +32,10 @@
       '<button type="button" class="btn btn--solid ' + extraClass + '" data-add-to-cart' +
       ' data-id="' + escapeHtml(product.id) + '"' +
       ' data-name="' + escapeHtml(product.name) + '"' +
+      ' data-variant="' + escapeHtml(collectionLabel(product)) + '"' +
       ' data-price="' + product.price + '"' +
       ' data-image="' + escapeHtml(photo(product, product.angles[0], true)) + '"' +
-      ' aria-label="Pre-order ' + escapeHtml(product.name) + '">Pre-order</button>'
+      ' aria-label="Pre-order ' + escapeHtml(collectionLabel(product) + " " + product.name) + '">Pre-order</button>'
     );
   }
 
@@ -44,11 +49,11 @@
             '<img src="' + photo(product, product.angles[0], true) + '"' +
             ' srcset="' + photo(product, product.angles[0], true) + " 560w, " + photo(product, product.angles[0], false) + ' 1122w"' +
             ' sizes="(max-width: 600px) 92vw, (max-width: 960px) 46vw, 380px"' +
-            ' alt="' + name + ' watch" width="560" height="700" loading="lazy">' +
+            ' alt="' + escapeHtml(collectionLabel(product)) + " " + name + ' watch" width="560" height="700" loading="lazy">' +
           "</div>" +
         "</a>" +
         '<div class="product-info">' +
-          '<span class="product-tag">' + escapeHtml(product.type) + "</span>" +
+          '<span class="product-tag">' + escapeHtml(collectionLabel(product)) + " &middot; " + escapeHtml(product.type) + "</span>" +
           "<" + headingTag + ' class="product-name"><a href="' + url + '">' + name + "</a></" + headingTag + ">" +
           '<p class="product-price">' + money.format(product.price) + "</p>" +
           preorderButton(product, "product-btn") +
@@ -92,13 +97,13 @@
     }
 
     var name = escapeHtml(product.name);
-    var collectionLabel = product.collection === "women" ? "Women" : "Men";
-    document.title = product.name + " | Vaurel";
+    var label = collectionLabel(product);
+    document.title = product.name + ", " + label + " | Vaurel";
 
     var slides = product.angles.map(function (angle, i) {
       return (
         '<div class="gallery-slide">' +
-          '<img src="' + photo(product, angle, false) + '" alt="' + name + ", " + escapeHtml(angle) + ' view"' +
+          '<img src="' + photo(product, angle, false) + '" alt="' + escapeHtml(label) + " " + name + ", " + escapeHtml(angle) + ' view"' +
           ' width="1122" height="1402"' + (i === 0 ? ' fetchpriority="high"' : ' loading="lazy"') + ">" +
         "</div>"
       );
@@ -123,7 +128,7 @@
     root.innerHTML =
       '<nav class="breadcrumb" aria-label="Breadcrumb">' +
         '<a href="collection.html">Collection</a><span aria-hidden="true">/</span>' +
-        '<a href="collection.html#' + product.collection + '">' + collectionLabel + '</a><span aria-hidden="true">/</span>' +
+        '<a href="collection.html#' + product.collection + '">' + label + '</a><span aria-hidden="true">/</span>' +
         '<span aria-current="page">' + name + "</span>" +
       "</nav>" +
       '<div class="product-detail">' +
@@ -132,7 +137,7 @@
           thumbs +
         "</div>" +
         '<div class="product-summary">' +
-          '<span class="eyebrow">' + collectionLabel + " &middot; " + escapeHtml(product.type) + "</span>" +
+          '<span class="eyebrow">' + label + " &middot; " + escapeHtml(product.type) + "</span>" +
           "<h1>" + name + "</h1>" +
           '<p class="product-detail-price">' + money.format(product.price) + "</p>" +
           '<p class="product-description">' + escapeHtml(product.description || "") + "</p>" +

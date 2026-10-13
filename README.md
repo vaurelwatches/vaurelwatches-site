@@ -11,7 +11,7 @@ A static website for Vaurel watches, built with plain HTML, CSS and a little Jav
 | `about.html`      | About: story, craft, values                   |
 | `contact.html`    | Contact: form, email, phone, address          |
 | `checkout.html`   | Checkout: customer details and order summary  |
-| `product.html`    | Watch page: photo gallery, details, Pre-order (e.g. `product.html?id=steel-ivory`) |
+| `product.html`    | Watch page: photo gallery, details, Pre-order (e.g. `product.html?id=mens-silver-ivory`) |
 | `js/products.js`  | **The list of watches**: names, prices, photos, details |
 | `js/shop.js`      | Builds the watch cards and watch pages from the list |
 | `js/cart.js`      | Shopping bag (bag icon, slide-out panel, checkout) |
