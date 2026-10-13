@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Vaurel</title>
+  <meta name="description" content="Get in touch with Vaurel.">
+  <link rel="icon" href="images/watch-1.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">VAUREL</a>
+      <nav aria-label="Main">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open menu">
+        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="collection.html">Collection</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Contact</span>
+        <h1>Get in Touch</h1>
+        <p>Questions, private viewings, or bespoke requests. We would be delighted to hear from you.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="contact-details">
+          <h2>We’re here to help.</h2>
+          <hr class="divider">
+          <div class="contact-item">
+            <h3>Email</h3>
+            <a href="mailto:hello@vaurelwatches.com">hello@vaurelwatches.com</a>
+          </div>
+          <div class="contact-item">
+            <h3>Phone</h3>
+            <p>+1 (000) 000-0000</p>
+          </div>
+          <div class="contact-item">
+            <h3>Atelier</h3>
+            <p>123 Placeholder Street<br>City, Country</p>
+          </div>
+          <div class="contact-item">
+            <h3>Hours</h3>
+            <p>Monday to Friday, 10:00 to 18:00</p>
+          </div>
+        </div>
+
+        <!-- Contact form.
+             GitHub Pages can't process forms itself, so by default this opens the
+             visitor's email app addressed to you. For a smoother experience, sign up
+             for a free form service (e.g. Formspree) and replace the action below with
+             the URL it gives you, e.g. action="https://formspree.io/f/your-id" -->
+        <form class="form" action="mailto:hello@vaurelwatches.com" method="post" enctype="text/plain">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option>General Enquiry</option>
+              <option>Product Question</option>
+              <option>Private Viewing</option>
+              <option>Order Support</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--solid">Send Message</button>
+          <p class="form-note">We typically respond within one business day.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">VAUREL</a>
+          <p>Refined timepieces crafted for those who value every moment.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="collection.html">Collection</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@vaurelwatches.com">hello@vaurelwatches.com</a></li>
+            <li><a href="#" aria-label="Instagram (placeholder link)">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Vaurel. All rights reserved.</span>
+        <span>Crafted with precision.</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
