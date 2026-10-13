@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Collection | Vaurel</title>
   <meta name="description" content="Explore the Vaurel collection of fine timepieces.">
-  <link rel="icon" href="images/watch-1.svg" type="image/svg+xml">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=5">
 </head>
 <body>
 
@@ -22,7 +22,8 @@
           <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
           <ul class="nav-list">
             <li><a href="index.html">Home</a></li>
-            <li><a href="collection.html" aria-current="page">Collection</a></li>
+            <li><a href="men.html">Shop Men</a></li>
+            <li><a href="women.html">Shop Women</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
@@ -45,66 +46,27 @@
       </div>
     </section>
 
-    <!-- Collection grid: copy an <article class="product"> block to add a watch.
-         Replace the image, name and price with your own. -->
-    <section class="section">
+    <!-- Watches are listed in js/products.js -->
+    <section class="section collection-section" id="men" data-collection-section>
       <div class="container">
-        <div class="grid">
-          <article class="product">
-            <div class="product-image"><img src="images/watch-1.svg" alt="Placeholder: Noir Classique watch" width="800" height="1000" loading="lazy"></div>
-            <div class="product-info">
-              <span class="product-tag">Automatic</span>
-              <h2 class="product-name">Noir Classique</h2>
-              <p class="product-price">$2,450</p>
-              <a href="mailto:hello@vaurelwatches.com?subject=Pre-order%3A%20Noir%20Classique&body=Hello%20Vaurel%2C%0A%0AI%20would%20like%20to%20pre-order%20the%20Noir%20Classique%20%28%242%2C450%29.%0A%0AName%3A%0APhone%3A%0AShipping%20country%3A%0A%0AThank%20you." data-add-to-cart data-id="noir-classique" data-name="Noir Classique" data-price="2450" data-image="images/watch-1.svg" class="btn btn--solid product-btn" aria-label="Pre-order Noir Classique">Pre-order</a>
-            </div>
-          </article>
-          <article class="product">
-            <div class="product-image"><img src="images/watch-2.svg" alt="Placeholder: Blanc Éternel watch" width="800" height="1000" loading="lazy"></div>
-            <div class="product-info">
-              <span class="product-tag">Dress</span>
-              <h2 class="product-name">Blanc Éternel</h2>
-              <p class="product-price">$2,150</p>
-              <a href="mailto:hello@vaurelwatches.com?subject=Pre-order%3A%20Blanc%20%C3%89ternel&body=Hello%20Vaurel%2C%0A%0AI%20would%20like%20to%20pre-order%20the%20Blanc%20%C3%89ternel%20%28%242%2C150%29.%0A%0AName%3A%0APhone%3A%0AShipping%20country%3A%0A%0AThank%20you." data-add-to-cart data-id="blanc-eternel" data-name="Blanc Éternel" data-price="2150" data-image="images/watch-2.svg" class="btn btn--solid product-btn" aria-label="Pre-order Blanc Éternel">Pre-order</a>
-            </div>
-          </article>
-          <article class="product">
-            <div class="product-image"><img src="images/watch-3.svg" alt="Placeholder: Aurum Royale watch" width="800" height="1000" loading="lazy"></div>
-            <div class="product-info">
-              <span class="product-tag">Limited Edition</span>
-              <h2 class="product-name">Aurum Royale</h2>
-              <p class="product-price">$4,900</p>
-              <a href="mailto:hello@vaurelwatches.com?subject=Pre-order%3A%20Aurum%20Royale&body=Hello%20Vaurel%2C%0A%0AI%20would%20like%20to%20pre-order%20the%20Aurum%20Royale%20%28%244%2C900%29.%0A%0AName%3A%0APhone%3A%0AShipping%20country%3A%0A%0AThank%20you." data-add-to-cart data-id="aurum-royale" data-name="Aurum Royale" data-price="4900" data-image="images/watch-3.svg" class="btn btn--solid product-btn" aria-label="Pre-order Aurum Royale">Pre-order</a>
-            </div>
-          </article>
-          <article class="product">
-            <div class="product-image"><img src="images/watch-4.svg" alt="Placeholder: Héritage Chrono watch" width="800" height="1000" loading="lazy"></div>
-            <div class="product-info">
-              <span class="product-tag">Chronograph</span>
-              <h2 class="product-name">Héritage Chrono</h2>
-              <p class="product-price">$3,200</p>
-              <a href="mailto:hello@vaurelwatches.com?subject=Pre-order%3A%20H%C3%A9ritage%20Chrono&body=Hello%20Vaurel%2C%0A%0AI%20would%20like%20to%20pre-order%20the%20H%C3%A9ritage%20Chrono%20%28%243%2C200%29.%0A%0AName%3A%0APhone%3A%0AShipping%20country%3A%0A%0AThank%20you." data-add-to-cart data-id="heritage-chrono" data-name="Héritage Chrono" data-price="3200" data-image="images/watch-4.svg" class="btn btn--solid product-btn" aria-label="Pre-order Héritage Chrono">Pre-order</a>
-            </div>
-          </article>
-          <article class="product">
-            <div class="product-image"><img src="images/watch-5.svg" alt="Placeholder: Minuit Or watch" width="800" height="1000" loading="lazy"></div>
-            <div class="product-info">
-              <span class="product-tag">Automatic</span>
-              <h2 class="product-name">Minuit Or</h2>
-              <p class="product-price">$2,750</p>
-              <a href="mailto:hello@vaurelwatches.com?subject=Pre-order%3A%20Minuit%20Or&body=Hello%20Vaurel%2C%0A%0AI%20would%20like%20to%20pre-order%20the%20Minuit%20Or%20%28%242%2C750%29.%0A%0AName%3A%0APhone%3A%0AShipping%20country%3A%0A%0AThank%20you." data-add-to-cart data-id="minuit-or" data-name="Minuit Or" data-price="2750" data-image="images/watch-5.svg" class="btn btn--solid product-btn" aria-label="Pre-order Minuit Or">Pre-order</a>
-            </div>
-          </article>
-          <article class="product">
-            <div class="product-image"><img src="images/watch-6.svg" alt="Placeholder: Ivoire Prestige watch" width="800" height="1000" loading="lazy"></div>
-            <div class="product-info">
-              <span class="product-tag">Dress</span>
-              <h2 class="product-name">Ivoire Prestige</h2>
-              <p class="product-price">$2,300</p>
-              <a href="mailto:hello@vaurelwatches.com?subject=Pre-order%3A%20Ivoire%20Prestige&body=Hello%20Vaurel%2C%0A%0AI%20would%20like%20to%20pre-order%20the%20Ivoire%20Prestige%20%28%242%2C300%29.%0A%0AName%3A%0APhone%3A%0AShipping%20country%3A%0A%0AThank%20you." data-add-to-cart data-id="ivoire-prestige" data-name="Ivoire Prestige" data-price="2300" data-image="images/watch-6.svg" class="btn btn--solid product-btn" aria-label="Pre-order Ivoire Prestige">Pre-order</a>
-            </div>
-          </article>
+        <div class="collection-heading">
+          <span class="eyebrow">For Him</span>
+          <h2 class="section-title">Men&rsquo;s Collection</h2>
         </div>
+        <noscript><p class="center">Please turn on JavaScript to see the collection.</p></noscript>
+        <div class="grid" data-product-grid="men"></div>
+        <p class="collection-empty" data-collection-empty hidden>Coming soon.</p>
+      </div>
+    </section>
+
+    <section class="section section--soft collection-section" id="women" data-collection-section>
+      <div class="container">
+        <div class="collection-heading">
+          <span class="eyebrow">For Her</span>
+          <h2 class="section-title">Women&rsquo;s Collection</h2>
+        </div>
+        <div class="grid" data-product-grid="women"></div>
+        <p class="collection-empty" data-collection-empty hidden>The women&rsquo;s collection is coming soon.</p>
       </div>
     </section>
 
@@ -128,7 +90,9 @@
         <div>
           <h4>Explore</h4>
           <ul>
-            <li><a href="collection.html">Collection</a></li>
+            <li><a href="men.html">Shop Men</a></li>
+            <li><a href="women.html">Shop Women</a></li>
+            <li><a href="collection.html">Full Collection</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
@@ -148,6 +112,8 @@
     </div>
   </footer>
 
-  <script src="js/cart.js" defer></script>
+  <script src="js/products.js?v=5" defer></script>
+  <script src="js/shop.js?v=5" defer></script>
+  <script src="js/cart.js?v=5" defer></script>
 </body>
 </html>

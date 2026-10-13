@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vaurel | Fine Timepieces</title>
   <meta name="description" content="Vaurel — refined timepieces crafted for those who value time.">
-  <link rel="icon" href="images/watch-1.svg" type="image/svg+xml">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=5">
 </head>
 <body>
 
@@ -22,7 +22,8 @@
           <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
           <ul class="nav-list">
             <li><a href="index.html" aria-current="page">Home</a></li>
-            <li><a href="collection.html">Collection</a></li>
+            <li><a href="men.html">Shop Men</a></li>
+            <li><a href="women.html">Shop Women</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
@@ -56,7 +57,7 @@
     <section class="section section--light">
       <div class="container split">
         <div class="split-media">
-          <img src="images/about.svg" alt="Placeholder: Vaurel watch detail" width="1200" height="1000">
+          <img src="images/watches/mens-espresso-brown/front.jpg" alt="Vaurel automatic watch with brown dial and rose gold case" width="1122" height="1402" loading="lazy">
         </div>
         <div>
           <span class="eyebrow">Our Story</span>
@@ -77,35 +78,8 @@
           <h2 class="section-title">Signature Pieces</h2>
           <hr class="divider">
         </div>
-        <div class="grid">
-          <article class="product">
-            <div class="product-image"><img src="images/watch-1.svg" alt="Placeholder: Noir Classique watch" width="800" height="1000" loading="lazy"></div>
-            <div class="product-info">
-              <span class="product-tag">Automatic</span>
-              <h3 class="product-name">Noir Classique</h3>
-              <p class="product-price">$2,450</p>
-              <a href="mailto:hello@vaurelwatches.com?subject=Pre-order%3A%20Noir%20Classique&body=Hello%20Vaurel%2C%0A%0AI%20would%20like%20to%20pre-order%20the%20Noir%20Classique%20%28%242%2C450%29.%0A%0AName%3A%0APhone%3A%0AShipping%20country%3A%0A%0AThank%20you." data-add-to-cart data-id="noir-classique" data-name="Noir Classique" data-price="2450" data-image="images/watch-1.svg" class="btn btn--solid product-btn" aria-label="Pre-order Noir Classique">Pre-order</a>
-            </div>
-          </article>
-          <article class="product">
-            <div class="product-image"><img src="images/watch-2.svg" alt="Placeholder: Blanc Éternel watch" width="800" height="1000" loading="lazy"></div>
-            <div class="product-info">
-              <span class="product-tag">Dress</span>
-              <h3 class="product-name">Blanc Éternel</h3>
-              <p class="product-price">$2,150</p>
-              <a href="mailto:hello@vaurelwatches.com?subject=Pre-order%3A%20Blanc%20%C3%89ternel&body=Hello%20Vaurel%2C%0A%0AI%20would%20like%20to%20pre-order%20the%20Blanc%20%C3%89ternel%20%28%242%2C150%29.%0A%0AName%3A%0APhone%3A%0AShipping%20country%3A%0A%0AThank%20you." data-add-to-cart data-id="blanc-eternel" data-name="Blanc Éternel" data-price="2150" data-image="images/watch-2.svg" class="btn btn--solid product-btn" aria-label="Pre-order Blanc Éternel">Pre-order</a>
-            </div>
-          </article>
-          <article class="product">
-            <div class="product-image"><img src="images/watch-3.svg" alt="Placeholder: Aurum Royale watch" width="800" height="1000" loading="lazy"></div>
-            <div class="product-info">
-              <span class="product-tag">Limited Edition</span>
-              <h3 class="product-name">Aurum Royale</h3>
-              <p class="product-price">$4,900</p>
-              <a href="mailto:hello@vaurelwatches.com?subject=Pre-order%3A%20Aurum%20Royale&body=Hello%20Vaurel%2C%0A%0AI%20would%20like%20to%20pre-order%20the%20Aurum%20Royale%20%28%244%2C900%29.%0A%0AName%3A%0APhone%3A%0AShipping%20country%3A%0A%0AThank%20you." data-add-to-cart data-id="aurum-royale" data-name="Aurum Royale" data-price="4900" data-image="images/watch-3.svg" class="btn btn--solid product-btn" aria-label="Pre-order Aurum Royale">Pre-order</a>
-            </div>
-          </article>
-        </div>
+        <noscript><p class="center">Please turn on JavaScript to see the collection.</p></noscript>
+        <div class="grid" data-product-grid="featured"></div>
         <div class="center" style="margin-top: 3.5rem;">
           <a href="collection.html" class="btn">View Full Collection</a>
         </div>
@@ -160,7 +134,9 @@
         <div>
           <h4>Explore</h4>
           <ul>
-            <li><a href="collection.html">Collection</a></li>
+            <li><a href="men.html">Shop Men</a></li>
+            <li><a href="women.html">Shop Women</a></li>
+            <li><a href="collection.html">Full Collection</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
@@ -180,6 +156,8 @@
     </div>
   </footer>
 
-  <script src="js/cart.js" defer></script>
+  <script src="js/products.js?v=5" defer></script>
+  <script src="js/shop.js?v=5" defer></script>
+  <script src="js/cart.js?v=5" defer></script>
 </body>
 </html>

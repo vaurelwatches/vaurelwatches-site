@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Women’s Collection | Vaurel</title>
+  <meta name="description" content="Shop the Vaurel women’s collection of automatic watches.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=5">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">VAUREL</a>
+      <div class="header-actions">
+        <nav aria-label="Main">
+          <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open menu">
+          <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="men.html">Shop Men</a></li>
+            <li><a href="women.html" aria-current="page">Shop Women</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="checkout.html" class="cart-toggle" aria-label="Shopping bag">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M9 8V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+          <span class="cart-count" data-cart-count hidden>0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">For Her</span>
+        <h1>Women&rsquo;s Collection</h1>
+        <p>Refined automatic timepieces with Vaurel&rsquo;s signature open V dial, in stainless steel and rose gold.</p>
+        <p class="page-note">Pre-orders are now open. Reserve your piece and we will confirm the details with you by email.</p>
+      </div>
+    </section>
+
+    <!-- Watches are listed in js/products.js -->
+    <section class="section collection-section" id="women" data-collection-section>
+      <div class="container">
+        <noscript><p class="center">Please turn on JavaScript to see the collection.</p></noscript>
+        <div class="grid" data-product-grid="women"></div>
+        <p class="collection-empty" data-collection-empty hidden>The women&rsquo;s collection is coming soon.</p>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <div class="container">
+        <span class="eyebrow">Enquiries</span>
+        <h2 class="section-title">Interested in a piece?</h2>
+        <p>Contact us for availability, sizing, or to arrange a private viewing.</p>
+        <a href="contact.html" class="btn btn--solid">Contact Us</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">VAUREL</a>
+          <p>Refined timepieces crafted for those who value every moment.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="men.html">Shop Men</a></li>
+            <li><a href="women.html">Shop Women</a></li>
+            <li><a href="collection.html">Full Collection</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@vaurelwatches.com">hello@vaurelwatches.com</a></li>
+            <li><a href="#" aria-label="Instagram (placeholder link)">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Vaurel. All rights reserved.</span>
+        <span>Crafted with precision.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js?v=5" defer></script>
+  <script src="js/shop.js?v=5" defer></script>
+  <script src="js/cart.js?v=5" defer></script>
+</body>
+</html>

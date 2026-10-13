@@ -14,6 +14,7 @@
   --gold: #c9a24b;
   --gold-light: #e9d39a;
   --gold-dark: #8a6a2a;
+  --photo-bg: #d6d5d4; /* matches the light grey studio background of the watch photos */
 
   --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --font-body: "Montserrat", "Helvetica Neue", Arial, sans-serif;
@@ -150,7 +151,7 @@ p { margin: 0 0 1.25rem; }
   font-family: var(--font-display);
   font-size: 1.75rem;
   letter-spacing: 0.4em;
-  color: var(--white);
+  color: var(--gold);
   /* Optical balance for the trailing letter-spacing */
   margin-right: -0.4em;
 }
@@ -432,8 +433,10 @@ p { margin: 0 0 1.25rem; }
 
 .product-image {
   overflow: hidden;
-  background: var(--black);
+  background: var(--photo-bg);
 }
+
+.product-link { display: block; }
 
 .product-image img {
   width: 100%;
@@ -461,6 +464,9 @@ p { margin: 0 0 1.25rem; }
   margin: 0.35rem 0 0.5rem;
 }
 
+.product-name a { transition: color 0.3s ease; }
+.product-name a:hover { color: var(--gold); }
+
 .product-price {
   font-size: 0.95rem;
   letter-spacing: 0.15em;
@@ -483,6 +489,124 @@ p { margin: 0 0 1.25rem; }
   text-transform: uppercase;
   color: var(--gold) !important;
 }
+
+/* ---------- Collection sections ---------- */
+.collection-heading { text-align: center; margin-bottom: 3.5rem; }
+.collection-heading .section-title { margin-bottom: 0; }
+.collection-section { scroll-margin-top: var(--header-height); }
+.collection-empty { text-align: center; color: var(--grey); letter-spacing: 0.1em; }
+
+/* ---------- Watch page ---------- */
+.product-main { padding-top: calc(var(--header-height) + 2rem); }
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 2rem;
+}
+
+.breadcrumb a { transition: color 0.3s ease; }
+.breadcrumb a:hover { color: var(--gold); }
+.breadcrumb [aria-current] { color: rgba(255, 255, 255, 0.85); }
+
+.product-detail {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: start;
+  padding-bottom: var(--section-space);
+}
+
+/* Photos sit side by side; swipe on phones, thumbnails on any screen */
+.gallery-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  background: var(--photo-bg);
+}
+
+.gallery-track::-webkit-scrollbar { display: none; }
+
+.gallery-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+
+.gallery-slide img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.gallery-thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.gallery-thumb {
+  width: 72px;
+  padding: 0;
+  border: 1px solid var(--black-line);
+  background: var(--photo-bg);
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s ease, border-color 0.3s ease;
+}
+
+.gallery-thumb img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.gallery-thumb:hover { opacity: 1; }
+.gallery-thumb.is-active { opacity: 1; border-color: var(--gold); }
+
+.product-summary h1 {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 300;
+  margin-bottom: 0.75rem;
+}
+
+.product-detail-price {
+  font-size: 1.15rem;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  margin-bottom: 1.75rem;
+}
+
+.product-description { color: rgba(255, 255, 255, 0.75); }
+
+.product-detail-btn { width: 100%; margin-top: 0.75rem; }
+
+.spec-list {
+  margin: 2.5rem 0 0;
+  border-top: 1px solid var(--black-line);
+}
+
+.spec-list div {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--black-line);
+}
+
+.spec-list dt {
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  padding-top: 0.2rem;
+}
+
+.spec-list dd { margin: 0; color: rgba(255, 255, 255, 0.85); }
+
+.product-missing { padding: 4rem 0 var(--section-space); }
+.product-missing p { color: rgba(255, 255, 255, 0.7); margin-bottom: 2rem; }
 
 /* ---------- Call to action band ---------- */
 .cta {
@@ -695,6 +819,14 @@ body.bag-open { overflow: hidden; }
   margin: 0 0 0.25rem;
 }
 
+.bag-item-variant {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin: 0 0 0.35rem;
+}
+
 .bag-item-price {
   font-size: 0.85rem;
   letter-spacing: 0.1em;
@@ -876,6 +1008,13 @@ body.bag-open { overflow: hidden; }
    Responsive
    ========================================================================== */
 
+/* Medium screens: tighter menu so all links fit beside the logo */
+@media (min-width: 821px) and (max-width: 1100px) {
+  .nav-list,
+  .header-actions { gap: 1.5rem; }
+  .nav-list a { letter-spacing: 0.18em; }
+}
+
 @media (max-width: 960px) {
   .grid { grid-template-columns: repeat(2, 1fr); }
   .features { grid-template-columns: 1fr; gap: 2.5rem; max-width: 480px; margin-left: auto; margin-right: auto; }
@@ -915,6 +1054,7 @@ body.bag-open { overflow: hidden; }
   .nav-toggle:checked + .nav-toggle-label span::after { top: 0; transform: rotate(-45deg); }
 
   .split { grid-template-columns: 1fr; }
+  .product-detail { grid-template-columns: 1fr; }
   .split-media { max-width: 480px; margin: 0 1.5rem 1.5rem 0; }
   .split--reverse .split-media { order: -1; }
 
@@ -943,6 +1083,8 @@ body.bag-open { overflow: hidden; }
   .form .btn { width: 100%; }
 
   .footer-bottom { flex-direction: column; text-align: center; }
+
+  .spec-list div { grid-template-columns: 6.5rem 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
