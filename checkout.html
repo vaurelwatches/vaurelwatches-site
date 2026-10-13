@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout | Vaurel</title>
+  <meta name="description" content="Complete your Vaurel pre-order.">
+  <link rel="icon" href="images/watch-1.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">VAUREL</a>
+      <div class="header-actions">
+        <nav aria-label="Main">
+          <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open menu">
+          <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collection.html">Collection</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="checkout.html" class="cart-toggle" aria-label="Shopping bag">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M9 8V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+          <span class="cart-count" data-cart-count hidden>0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero page-hero--compact">
+      <div class="container">
+        <span class="eyebrow">Checkout</span>
+        <h1>Complete Your <span class="nowrap">Pre-order</span></h1>
+        <p>No payment is taken today. We will confirm availability, shipping and payment with you by email.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <noscript><p class="center">Please turn on JavaScript to use the bag, or email us at <a href="mailto:hello@vaurelwatches.com">hello@vaurelwatches.com</a> to pre-order.</p></noscript>
+
+        <!-- Shown when the bag is empty -->
+        <div class="checkout-empty center" data-bag-empty hidden>
+          <p>Your bag is empty.</p>
+          <a href="collection.html" class="btn btn--solid">Explore the Collection</a>
+        </div>
+
+        <div class="checkout-grid" data-bag-filled hidden>
+          <div>
+            <form class="form" id="checkout-form">
+              <h2 class="checkout-heading">Your Details</h2>
+              <div class="form-row">
+                <div class="field">
+                  <label for="name">Full name</label>
+                  <input type="text" id="name" name="name" autocomplete="name" required>
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+              </div>
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+              </div>
+
+              <h2 class="checkout-heading">Shipping Address</h2>
+              <div class="field">
+                <label for="address">Street address</label>
+                <input type="text" id="address" name="address" autocomplete="street-address" required>
+              </div>
+              <div class="form-row">
+                <div class="field">
+                  <label for="city">City</label>
+                  <input type="text" id="city" name="city" autocomplete="address-level2" required>
+                </div>
+                <div class="field">
+                  <label for="country">Country</label>
+                  <input type="text" id="country" name="country" autocomplete="country-name" required>
+                </div>
+              </div>
+              <div class="field">
+                <label for="notes">Notes (optional)</label>
+                <textarea id="notes" name="notes" rows="3" placeholder="Engraving, strap size, gift wrapping…"></textarea>
+              </div>
+              <button type="submit" class="btn btn--solid checkout-submit">Place Pre-order</button>
+              <p class="form-note">Your email app will open with your order ready to send.</p>
+            </form>
+
+            <!-- Shown after "Place Pre-order" -->
+            <div class="form checkout-done" id="checkout-done" tabindex="-1" hidden>
+              <span class="eyebrow">Almost done</span>
+              <h2 class="checkout-heading">Press send in your email app</h2>
+              <p>Your email app should now be open with your pre-order filled in. Press <strong>Send</strong> to place it, and we will reply to confirm.</p>
+              <p>Nothing opened? <a data-resend href="mailto:hello@vaurelwatches.com">Try again</a>, or email your order to <a href="mailto:hello@vaurelwatches.com">hello@vaurelwatches.com</a>.</p>
+              <button type="button" class="btn btn--solid" data-clear>I have sent it</button>
+            </div>
+          </div>
+
+          <aside class="order-summary" aria-labelledby="summary-title">
+            <h2 class="checkout-heading" id="summary-title">Order Summary</h2>
+            <ul class="bag-items" data-bag-items></ul>
+            <div class="bag-total"><span>Subtotal</span><span data-bag-subtotal></span></div>
+            <div class="bag-total bag-total--muted"><span>Shipping</span><span>Confirmed by email</span></div>
+            <p class="bag-note">Due today: $0. Payment is arranged once we confirm your pre-order.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">VAUREL</a>
+          <p>Refined timepieces crafted for those who value every moment.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="collection.html">Collection</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@vaurelwatches.com">hello@vaurelwatches.com</a></li>
+            <li><a href="#" aria-label="Instagram (placeholder link)">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Vaurel. All rights reserved.</span>
+        <span>Crafted with precision.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/cart.js" defer></script>
+</body>
+</html>

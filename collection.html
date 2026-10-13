@@ -16,16 +16,22 @@
   <header class="site-header">
     <div class="container">
       <a href="index.html" class="logo">VAUREL</a>
-      <nav aria-label="Main">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open menu">
-        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
-        <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="collection.html" aria-current="page">Collection</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="header-actions">
+        <nav aria-label="Main">
+          <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open menu">
+          <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collection.html" aria-current="page">Collection</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="checkout.html" class="cart-toggle" aria-label="Shopping bag">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M9 8V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+          <span class="cart-count" data-cart-count hidden>0</span>
+        </a>
+      </div>
     </div>
   </header>
 
@@ -50,7 +56,7 @@
               <span class="product-tag">Automatic</span>
               <h2 class="product-name">Noir Classique</h2>
               <p class="product-price">$2,450</p>
-              <a href="mailto:hello@vaurelwatches.com?subject=Pre-order%3A%20Noir%20Classique&body=Hello%20Vaurel%2C%0A%0AI%20would%20like%20to%20pre-order%20the%20Noir%20Classique%20%28%242%2C450%29.%0A%0AName%3A%0APhone%3A%0AShipping%20country%3A%0A%0AThank%20you." class="btn btn--solid product-btn" aria-label="Pre-order Noir Classique">Pre-order</a>
+              <a href="mailto:hello@vaurelwatches.com?subject=Pre-order%3A%20Noir%20Classique&body=Hello%20Vaurel%2C%0A%0AI%20would%20like%20to%20pre-order%20the%20Noir%20Classique%20%28%242%2C450%29.%0A%0AName%3A%0APhone%3A%0AShipping%20country%3A%0A%0AThank%20you." data-add-to-cart data-id="noir-classique" data-name="Noir Classique" data-price="2450" data-image="images/watch-1.svg" class="btn btn--solid product-btn" aria-label="Pre-order Noir Classique">Pre-order</a>
             </div>
           </article>
           <article class="product">
@@ -59,7 +65,7 @@
               <span class="product-tag">Dress</span>
               <h2 class="product-name">Blanc Éternel</h2>
               <p class="product-price">$2,150</p>
-              <a href="mailto:hello@vaurelwatches.com?subject=Pre-order%3A%20Blanc%20%C3%89ternel&body=Hello%20Vaurel%2C%0A%0AI%20would%20like%20to%20pre-order%20the%20Blanc%20%C3%89ternel%20%28%242%2C150%29.%0A%0AName%3A%0APhone%3A%0AShipping%20country%3A%0A%0AThank%20you." class="btn btn--solid product-btn" aria-label="Pre-order Blanc Éternel">Pre-order</a>
+              <a href="mailto:hello@vaurelwatches.com?subject=Pre-order%3A%20Blanc%20%C3%89ternel&body=Hello%20Vaurel%2C%0A%0AI%20would%20like%20to%20pre-order%20the%20Blanc%20%C3%89ternel%20%28%242%2C150%29.%0A%0AName%3A%0APhone%3A%0AShipping%20country%3A%0A%0AThank%20you." data-add-to-cart data-id="blanc-eternel" data-name="Blanc Éternel" data-price="2150" data-image="images/watch-2.svg" class="btn btn--solid product-btn" aria-label="Pre-order Blanc Éternel">Pre-order</a>
             </div>
           </article>
           <article class="product">
@@ -68,7 +74,7 @@
               <span class="product-tag">Limited Edition</span>
               <h2 class="product-name">Aurum Royale</h2>
               <p class="product-price">$4,900</p>
-              <a href="mailto:hello@vaurelwatches.com?subject=Pre-order%3A%20Aurum%20Royale&body=Hello%20Vaurel%2C%0A%0AI%20would%20like%20to%20pre-order%20the%20Aurum%20Royale%20%28%244%2C900%29.%0A%0AName%3A%0APhone%3A%0AShipping%20country%3A%0A%0AThank%20you." class="btn btn--solid product-btn" aria-label="Pre-order Aurum Royale">Pre-order</a>
+              <a href="mailto:hello@vaurelwatches.com?subject=Pre-order%3A%20Aurum%20Royale&body=Hello%20Vaurel%2C%0A%0AI%20would%20like%20to%20pre-order%20the%20Aurum%20Royale%20%28%244%2C900%29.%0A%0AName%3A%0APhone%3A%0AShipping%20country%3A%0A%0AThank%20you." data-add-to-cart data-id="aurum-royale" data-name="Aurum Royale" data-price="4900" data-image="images/watch-3.svg" class="btn btn--solid product-btn" aria-label="Pre-order Aurum Royale">Pre-order</a>
             </div>
           </article>
           <article class="product">
@@ -77,7 +83,7 @@
               <span class="product-tag">Chronograph</span>
               <h2 class="product-name">Héritage Chrono</h2>
               <p class="product-price">$3,200</p>
-              <a href="mailto:hello@vaurelwatches.com?subject=Pre-order%3A%20H%C3%A9ritage%20Chrono&body=Hello%20Vaurel%2C%0A%0AI%20would%20like%20to%20pre-order%20the%20H%C3%A9ritage%20Chrono%20%28%243%2C200%29.%0A%0AName%3A%0APhone%3A%0AShipping%20country%3A%0A%0AThank%20you." class="btn btn--solid product-btn" aria-label="Pre-order Héritage Chrono">Pre-order</a>
+              <a href="mailto:hello@vaurelwatches.com?subject=Pre-order%3A%20H%C3%A9ritage%20Chrono&body=Hello%20Vaurel%2C%0A%0AI%20would%20like%20to%20pre-order%20the%20H%C3%A9ritage%20Chrono%20%28%243%2C200%29.%0A%0AName%3A%0APhone%3A%0AShipping%20country%3A%0A%0AThank%20you." data-add-to-cart data-id="heritage-chrono" data-name="Héritage Chrono" data-price="3200" data-image="images/watch-4.svg" class="btn btn--solid product-btn" aria-label="Pre-order Héritage Chrono">Pre-order</a>
             </div>
           </article>
           <article class="product">
@@ -86,7 +92,7 @@
               <span class="product-tag">Automatic</span>
               <h2 class="product-name">Minuit Or</h2>
               <p class="product-price">$2,750</p>
-              <a href="mailto:hello@vaurelwatches.com?subject=Pre-order%3A%20Minuit%20Or&body=Hello%20Vaurel%2C%0A%0AI%20would%20like%20to%20pre-order%20the%20Minuit%20Or%20%28%242%2C750%29.%0A%0AName%3A%0APhone%3A%0AShipping%20country%3A%0A%0AThank%20you." class="btn btn--solid product-btn" aria-label="Pre-order Minuit Or">Pre-order</a>
+              <a href="mailto:hello@vaurelwatches.com?subject=Pre-order%3A%20Minuit%20Or&body=Hello%20Vaurel%2C%0A%0AI%20would%20like%20to%20pre-order%20the%20Minuit%20Or%20%28%242%2C750%29.%0A%0AName%3A%0APhone%3A%0AShipping%20country%3A%0A%0AThank%20you." data-add-to-cart data-id="minuit-or" data-name="Minuit Or" data-price="2750" data-image="images/watch-5.svg" class="btn btn--solid product-btn" aria-label="Pre-order Minuit Or">Pre-order</a>
             </div>
           </article>
           <article class="product">
@@ -95,7 +101,7 @@
               <span class="product-tag">Dress</span>
               <h2 class="product-name">Ivoire Prestige</h2>
               <p class="product-price">$2,300</p>
-              <a href="mailto:hello@vaurelwatches.com?subject=Pre-order%3A%20Ivoire%20Prestige&body=Hello%20Vaurel%2C%0A%0AI%20would%20like%20to%20pre-order%20the%20Ivoire%20Prestige%20%28%242%2C300%29.%0A%0AName%3A%0APhone%3A%0AShipping%20country%3A%0A%0AThank%20you." class="btn btn--solid product-btn" aria-label="Pre-order Ivoire Prestige">Pre-order</a>
+              <a href="mailto:hello@vaurelwatches.com?subject=Pre-order%3A%20Ivoire%20Prestige&body=Hello%20Vaurel%2C%0A%0AI%20would%20like%20to%20pre-order%20the%20Ivoire%20Prestige%20%28%242%2C300%29.%0A%0AName%3A%0APhone%3A%0AShipping%20country%3A%0A%0AThank%20you." data-add-to-cart data-id="ivoire-prestige" data-name="Ivoire Prestige" data-price="2300" data-image="images/watch-6.svg" class="btn btn--solid product-btn" aria-label="Pre-order Ivoire Prestige">Pre-order</a>
             </div>
           </article>
         </div>
@@ -142,5 +148,6 @@
     </div>
   </footer>
 
+  <script src="js/cart.js" defer></script>
 </body>
 </html>
