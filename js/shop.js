@@ -14,6 +14,13 @@
     });
   }
 
+  // How each photo angle is described to visitors (and screen readers)
+  var ANGLE_LABELS = { front: "front", dial: "dial close-up", side: "side and crown", back: "case back", wrist: "on the wrist" };
+
+  function angleLabel(angle) {
+    return ANGLE_LABELS[angle] || angle;
+  }
+
   function photo(product, angle, small) {
     return "images/watches/" + product.id + "/" + angle + (small ? "-sm" : "") + ".jpg";
   }
@@ -103,7 +110,7 @@
     var slides = product.angles.map(function (angle, i) {
       return (
         '<div class="gallery-slide">' +
-          '<img src="' + photo(product, angle, false) + '" alt="' + escapeHtml(label) + " " + name + ", " + escapeHtml(angle) + ' view"' +
+          '<img src="' + photo(product, angle, false) + '" alt="' + escapeHtml(label) + " " + name + ", " + escapeHtml(angleLabel(angle)) + '"' +
           ' width="1122" height="1402"' + (i === 0 ? ' fetchpriority="high"' : ' loading="lazy"') + ">" +
         "</div>"
       );
@@ -114,7 +121,7 @@
         product.angles.map(function (angle, i) {
           return (
             '<button type="button" class="gallery-thumb' + (i === 0 ? " is-active" : "") + '" data-slide="' + i + '"' +
-            ' aria-label="Show ' + escapeHtml(angle) + ' view"' + (i === 0 ? ' aria-current="true"' : "") + ">" +
+            ' aria-label="Show ' + escapeHtml(angleLabel(angle)) + '"' + (i === 0 ? ' aria-current="true"' : "") + ">" +
               '<img src="' + photo(product, angle, true) + '" alt="" width="112" height="140" loading="lazy">' +
             "</button>"
           );
