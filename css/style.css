@@ -961,6 +961,28 @@ body.bag-open { overflow: hidden; }
 .checkout-empty { padding: 2rem 0; }
 .checkout-empty p { color: rgba(255, 255, 255, 0.7); margin-bottom: 2rem; }
 
+/* ---------- Contact icons (footer and Contact page) ---------- */
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.icon {
+  flex: none;
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.icon .icon-fill { fill: var(--gold); stroke: none; }
+
+/* On the Contact page the underline sits under the text only */
+.contact-item a.icon-link { border-bottom: 0; }
+.contact-item a.icon-link span { border-bottom: 1px solid rgba(201, 162, 75, 0.4); }
+
 /* ---------- Footer ---------- */
 .site-footer {
   background: #050505;
