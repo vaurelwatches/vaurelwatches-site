@@ -39,7 +39,7 @@ To change where orders are sent, edit `ORDER_EMAIL` at the top of `js/cart.js`. 
 
 ## Making sure visitors see your latest changes
 
-Each page loads `css/style.css?v=11` and `js/...js?v=11`. After changing the CSS or JavaScript files, raise that number in every `.html` file (e.g. to `?v=12`). Browsers then fetch the new files instead of mixing in old saved copies.
+Each page loads `css/style.css?v=12` and `js/...js?v=12`. After changing the CSS or JavaScript files, raise that number in every `.html` file (e.g. to `?v=13`). Browsers then fetch the new files instead of mixing in old saved copies.
 
 ## Contact form
 

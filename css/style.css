@@ -312,6 +312,55 @@ p { margin: 0 0 1.25rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
 
 
+/* ---------- Highlights band (Home) ---------- */
+.perks {
+  border-top: 1px solid var(--black-line);
+  border-bottom: 1px solid var(--black-line);
+  background: var(--black-soft);
+  padding: 2.25rem 0;
+}
+
+.perks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.perk {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.perk h2 {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin: 0 0 0.25rem;
+}
+
+.perk p { font-size: 0.85rem; color: var(--grey); margin: 0; }
+
+.icon--lg { stroke-width: 1.1; }
+
+/* Shipping and warranty under the price on watch pages */
+.product-perks {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.75rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.product-perks li { display: inline-flex; align-items: center; gap: 0.55rem; }
+
 /* ---------- Page header (inner pages) ---------- */
 .page-hero {
   padding: calc(var(--header-height) + clamp(4rem, 10vw, 7rem)) 0 clamp(3rem, 7vw, 5rem);
@@ -1030,6 +1079,8 @@ body.bag-open { overflow: hidden; }
   .grid { grid-template-columns: repeat(2, 1fr); }
   .features { grid-template-columns: 1fr; gap: 2.5rem; max-width: 480px; margin-left: auto; margin-right: auto; }
   .contact-grid { grid-template-columns: 1fr; }
+  .perks-grid { grid-template-columns: 1fr; gap: 1.25rem; max-width: 360px; margin: 0 auto; }
+  .perk { justify-content: flex-start; }
   .checkout-grid { grid-template-columns: 1fr; }
   .order-summary { position: static; order: -1; }
 }
