@@ -30,8 +30,8 @@ window.VAUREL_PRODUCTS = [
     price: 2750,
     featured: true,
     angles: ["front", "dial", "side", "back", "wrist"],
-    details: { Case: "Rose gold", Dial: "Green", Strap: "Green leather", Movement: "Automatic" },
-    description: "A deep green dial framed in rose gold, with Vaurel's signature V opening onto the automatic movement beneath."
+    details: { Case: "Rose gold-tone stainless steel", Dial: "Green", Strap: "Genuine leather, green", Movement: "Automatic" },
+    description: "A deep green dial framed in a warm rose gold-tone case, with Vaurel's signature V opening onto the automatic movement beneath. Finished on a green genuine leather strap."
   },
   {
     id: "mens-midnight-blue",
@@ -41,8 +41,8 @@ window.VAUREL_PRODUCTS = [
     price: 2450,
     featured: false,
     angles: ["front", "dial", "side", "back", "wrist"],
-    details: { Case: "Stainless steel", Dial: "Blue", Strap: "Blue leather", Movement: "Automatic" },
-    description: "A midnight blue dial in polished stainless steel, finished with a matching blue leather strap."
+    details: { Case: "Polished stainless steel", Dial: "Blue", Strap: "Genuine leather, blue", Movement: "Automatic" },
+    description: "A midnight blue dial in polished stainless steel, finished with a matching blue genuine leather strap."
   },
   {
     id: "mens-obsidian-black",
@@ -52,8 +52,8 @@ window.VAUREL_PRODUCTS = [
     price: 2750,
     featured: true,
     angles: ["front", "dial", "side", "back", "wrist"],
-    details: { Case: "Rose gold", Dial: "Black", Strap: "Black leather", Movement: "Automatic" },
-    description: "A black dial and rose gold case: the most classic pairing in the collection."
+    details: { Case: "Rose gold-tone stainless steel", Dial: "Black", Strap: "Genuine leather, black", Movement: "Automatic" },
+    description: "A black dial in a rose gold-tone case on black genuine leather: the most classic pairing in the collection."
   },
   {
     id: "mens-silver-ivory",
@@ -63,8 +63,8 @@ window.VAUREL_PRODUCTS = [
     price: 2450,
     featured: false,
     angles: ["front", "dial", "side", "back", "wrist"],
-    details: { Case: "Stainless steel", Dial: "Silver", Strap: "Black leather", Movement: "Automatic" },
-    description: "A bright silver dial in stainless steel on black leather, crisp and understated."
+    details: { Case: "Polished stainless steel", Dial: "Silver", Strap: "Genuine leather, black", Movement: "Automatic" },
+    description: "A bright silver dial in polished stainless steel on black genuine leather, crisp and understated."
   },
   {
     id: "mens-espresso-brown",
@@ -74,8 +74,8 @@ window.VAUREL_PRODUCTS = [
     price: 2750,
     featured: false,
     angles: ["front", "dial", "side", "back", "wrist"],
-    details: { Case: "Rose gold", Dial: "Brown", Strap: "Brown leather", Movement: "Automatic" },
-    description: "A rich brown dial with rose gold accents and a brown leather strap."
+    details: { Case: "Rose gold-tone stainless steel", Dial: "Brown", Strap: "Genuine leather, brown", Movement: "Automatic" },
+    description: "A rich brown dial in a rose gold-tone case, paired with a brown genuine leather strap."
   },
   {
     id: "womens-blush-ivory",
@@ -85,8 +85,8 @@ window.VAUREL_PRODUCTS = [
     price: 2450,
     featured: false,
     angles: ["front", "dial", "side", "back", "wrist"],
-    details: { Case: "Stainless steel", Dial: "Ivory", Strap: "Blush leather", Movement: "Automatic" },
-    description: "A soft ivory dial in stainless steel, paired with a blush leather strap."
+    details: { Case: "Polished stainless steel", Dial: "Ivory", Strap: "Genuine leather, blush", Movement: "Automatic" },
+    description: "A soft ivory dial in polished stainless steel, paired with a blush genuine leather strap."
   },
   {
     id: "womens-rose-pink",
@@ -96,8 +96,8 @@ window.VAUREL_PRODUCTS = [
     price: 2750,
     featured: true,
     angles: ["front", "dial", "side", "back", "wrist"],
-    details: { Case: "Rose gold", Dial: "Rose pink", Strap: "Blush leather", Movement: "Automatic" },
-    description: "A rose pink dial set in warm rose gold, on a blush leather strap."
+    details: { Case: "Rose gold-tone stainless steel", Dial: "Rose pink", Strap: "Genuine leather, blush", Movement: "Automatic" },
+    description: "A rose pink dial set in a warm rose gold-tone case, on a blush genuine leather strap."
   },
   {
     id: "womens-midnight-blue",
@@ -107,8 +107,8 @@ window.VAUREL_PRODUCTS = [
     price: 2450,
     featured: false,
     angles: ["front", "dial", "side", "back", "wrist"],
-    details: { Case: "Stainless steel", Dial: "Blue", Strap: "Blue leather", Movement: "Automatic" },
-    description: "A midnight blue dial in stainless steel, finished with a matching blue leather strap."
+    details: { Case: "Polished stainless steel", Dial: "Blue", Strap: "Genuine leather, blue", Movement: "Automatic" },
+    description: "A midnight blue dial in polished stainless steel, finished with a matching blue genuine leather strap."
   },
   {
     id: "womens-emerald-green",
@@ -118,8 +118,8 @@ window.VAUREL_PRODUCTS = [
     price: 2750,
     featured: false,
     angles: ["front", "dial", "side", "back", "wrist"],
-    details: { Case: "Rose gold", Dial: "Green", Strap: "Green leather", Movement: "Automatic" },
-    description: "A deep green dial framed in rose gold, with a matching green leather strap."
+    details: { Case: "Rose gold-tone stainless steel", Dial: "Green", Strap: "Genuine leather, green", Movement: "Automatic" },
+    description: "A deep green dial framed in a warm rose gold-tone case, with a matching green genuine leather strap."
   },
   {
     id: "womens-espresso-brown",
@@ -129,7 +129,7 @@ window.VAUREL_PRODUCTS = [
     price: 2750,
     featured: false,
     angles: ["front", "dial", "side", "back", "wrist"],
-    details: { Case: "Rose gold", Dial: "Brown", Strap: "Brown leather", Movement: "Automatic" },
-    description: "A rich brown dial with rose gold accents and a brown leather strap."
+    details: { Case: "Rose gold-tone stainless steel", Dial: "Brown", Strap: "Genuine leather, brown", Movement: "Automatic" },
+    description: "A rich brown dial in a rose gold-tone case, paired with a brown genuine leather strap."
   }
 ];
