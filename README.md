@@ -11,7 +11,8 @@ A static website for Vaurel watches, built with plain HTML, CSS and a little Jav
 | `women.html`      | Shop Women: the women's collection            |
 | `collection.html` | Full collection: men's and women's together   |
 | `about.html`      | About: story, craft, values                   |
-| `contact.html`    | Contact: form, email, phone, address          |
+| `contact.html`    | Contact: form, email, phone, Instagram         |
+| `warranty.html`   | Warranty & Shipping: 2-year warranty terms, free worldwide shipping |
 | `checkout.html`   | Checkout: customer details and order summary  |
 | `product.html`    | Watch page: photo gallery, details, Pre-order (e.g. `product.html?id=mens-silver-ivory`) |
 | `js/products.js`  | **The list of watches**: names, prices, photos, details |
@@ -39,7 +40,7 @@ To change where orders are sent, edit `ORDER_EMAIL` at the top of `js/cart.js`. 
 
 ## Making sure visitors see your latest changes
 
-Each page loads `css/style.css?v=12` and `js/...js?v=12`. After changing the CSS or JavaScript files, raise that number in every `.html` file (e.g. to `?v=13`). Browsers then fetch the new files instead of mixing in old saved copies.
+Each page loads `css/style.css?v=13` and `js/...js?v=13`. After changing the CSS or JavaScript files, raise that number in every `.html` file (e.g. to `?v=14`). Browsers then fetch the new files instead of mixing in old saved copies.
 
 ## Contact form
 

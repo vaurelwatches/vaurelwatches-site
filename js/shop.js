@@ -150,8 +150,8 @@
           '<p class="product-description">' + escapeHtml(product.description || "") + "</p>" +
           preorderButton(product, "product-detail-btn") +
           '<ul class="product-perks">' +
-            '<li><svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3 3v3h-7z"/><circle cx="6.5" cy="17" r="1.8"/><circle cx="17" cy="17" r="1.8"/></svg><span>Free worldwide shipping</span></li>' +
-            '<li><svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M12 3.2 5 6v5.5c0 4.3 2.9 7.9 7 9.3 4.1-1.4 7-5 7-9.3V6z"/><path d="m9 12 2.2 2.2L15.2 10"/></svg><span>2-year warranty</span></li>' +
+            '<li><svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3 3v3h-7z"/><circle cx="6.5" cy="17" r="1.8"/><circle cx="17" cy="17" r="1.8"/></svg><a href="warranty.html#shipping">Free worldwide shipping</a></li>' +
+            '<li><svg class="icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path d="M12 3.2 5 6v5.5c0 4.3 2.9 7.9 7 9.3 4.1-1.4 7-5 7-9.3V6z"/><path d="m9 12 2.2 2.2L15.2 10"/></svg><a href="warranty.html#warranty">2-year warranty</a></li>' +
           '</ul>' +
           '<p class="bag-note">Pre-order: no payment is taken today. We will confirm availability and payment with you by email.</p>' +
           (details ? '<dl class="spec-list">' + details + "</dl>" : "") +
