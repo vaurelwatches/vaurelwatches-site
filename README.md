@@ -11,7 +11,8 @@ A static website for Vaurel watches, built with plain HTML, CSS and a little Jav
 | `women.html`      | Shop Women: the women's collection            |
 | `collection.html` | Full collection: men's and women's together   |
 | `about.html`      | About: story, craft, values                   |
-| `contact.html`    | Contact: form, email, phone, address          |
+| `contact.html`    | Contact: form, email, phone, Instagram         |
+| `warranty.html`   | Warranty & Shipping: 2-year warranty terms, free worldwide shipping |
 | `checkout.html`   | Checkout: customer details and order summary  |
 | `product.html`    | Watch page: photo gallery, details, Pre-order (e.g. `product.html?id=mens-silver-ivory`) |
 | `js/products.js`  | **The list of watches**: names, prices, photos, details |
@@ -25,7 +26,7 @@ A static website for Vaurel watches, built with plain HTML, CSS and a little Jav
 
 **Watches and photos.** All watches are listed in `js/products.js`, and the Home page, Collection, watch pages and bag all update from it. To add or change a watch, edit its entry there (name, price, men/women, details, and which 3 are featured on the Home page). Each watch's photos live in `images/watches/<id>/`, as a large `<angle>.jpg` and a small `<angle>-sm.jpg`. To add more angles, add the photo files and list the angle names in that watch's `angles`, e.g. `["front", "side", "back"]`. Keep untouched originals in `photos/originals/`.
 
-The Home page hero still uses a placeholder drawing (`images/hero.svg`).
+The Home page hero photo is `images/hero.jpg`, with a smaller `images/hero-sm.jpg` for phones.
 
 **Text and contact details.** The brand story is on the Home and About pages. Contact details (email `vaurelwatches@gmail.com`, phone) are on the Contact page and in every footer. Pre-orders are emailed to the address set as `ORDER_EMAIL` in `js/cart.js`.
 
@@ -39,7 +40,7 @@ To change where orders are sent, edit `ORDER_EMAIL` at the top of `js/cart.js`. 
 
 ## Making sure visitors see your latest changes
 
-Each page loads `css/style.css?v=10` and `js/...js?v=10`. After changing the CSS or JavaScript files, raise that number in every `.html` file (e.g. to `?v=11`). Browsers then fetch the new files instead of mixing in old saved copies.
+Each page loads `css/style.css?v=13` and `js/...js?v=13`. After changing the CSS or JavaScript files, raise that number in every `.html` file (e.g. to `?v=14`). Browsers then fetch the new files instead of mixing in old saved copies.
 
 ## Contact form
 

@@ -270,21 +270,29 @@ p { margin: 0 0 1.25rem; }
   min-height: 100svh;
   display: flex;
   align-items: center;
-  padding: calc(var(--header-height) + 3rem) 0 4rem;
-  background: var(--black) url("../images/hero.svg") center right / cover no-repeat;
+  padding: calc(var(--header-height) + 2rem) 0 3rem;
+  background: var(--black);
   overflow: hidden;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.7) 45%, rgba(10,10,10,0.15) 100%);
+/* Text on the left, the full photo on the right */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
 }
 
-.hero .container { position: relative; }
-
 .hero-content { max-width: 620px; }
+
+.hero-media img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: calc(100svh - var(--header-height) - 5rem);
+  margin-left: auto;
+}
 
 .hero h1 {
   font-size: clamp(3rem, 8vw, 6rem);
@@ -303,15 +311,79 @@ p { margin: 0 0 1.25rem; }
 
 .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
 
-.scroll-cue {
-  position: absolute;
-  left: 50%;
-  bottom: 2rem;
-  transform: translateX(-50%);
-  width: 1px;
-  height: 60px;
-  background: linear-gradient(var(--gold), transparent);
+
+/* ---------- Highlights band (Home) ---------- */
+.perks {
+  border-top: 1px solid var(--black-line);
+  border-bottom: 1px solid var(--black-line);
+  background: var(--black-soft);
+  padding: 2.25rem 0;
 }
+
+.perks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.perk {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.perk h2 {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin: 0 0 0.25rem;
+}
+
+.perk p { font-size: 0.85rem; color: var(--grey); margin: 0; }
+
+.icon--lg { stroke-width: 1.1; }
+
+/* Shipping and warranty under the price on watch pages */
+.product-perks {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.75rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.product-perks li { display: inline-flex; align-items: center; gap: 0.55rem; }
+
+/* ---------- Warranty & Shipping page ---------- */
+.policy { max-width: 820px; }
+.policy h2 { font-size: clamp(1.75rem, 4vw, 2.4rem); margin: 0 0 1rem; scroll-margin-top: calc(var(--header-height) + 1rem); }
+.policy h2:not(:first-child) { margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--black-line); }
+.policy h3 {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 2rem 0 1rem;
+}
+.policy p, .policy li { color: rgba(255, 255, 255, 0.8); }
+.policy ul, .policy ol { padding-left: 1.2rem; margin: 0 0 1.25rem; }
+.policy li { margin-bottom: 0.5rem; }
+.policy li::marker { color: var(--gold); }
+.policy a, .contact-item p a, .order-summary .bag-total a { color: var(--gold); border-bottom: 1px solid rgba(201, 162, 75, 0.4); }
+.policy-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 0 3rem; }
+
+/* Links inside the highlights band and watch-page perks */
+.perk h2 a, .product-perks a { transition: color 0.3s ease; }
+.perk h2 a:hover, .product-perks a:hover { color: var(--gold); }
 
 /* ---------- Page header (inner pages) ---------- */
 .page-hero {
@@ -354,16 +426,6 @@ p { margin: 0 0 1.25rem; }
   object-fit: cover;
 }
 
-/* Thin gold frame offset behind the image */
-.split-media::before {
-  content: "";
-  position: absolute;
-  inset: 1.5rem -1.5rem -1.5rem 1.5rem;
-  border: 1px solid var(--gold);
-  z-index: -1;
-}
-
-.split-media { z-index: 0; }
 
 .quote {
   font-family: var(--font-display);
@@ -1041,6 +1103,9 @@ body.bag-open { overflow: hidden; }
   .grid { grid-template-columns: repeat(2, 1fr); }
   .features { grid-template-columns: 1fr; gap: 2.5rem; max-width: 480px; margin-left: auto; margin-right: auto; }
   .contact-grid { grid-template-columns: 1fr; }
+  .policy-columns { grid-template-columns: 1fr; }
+  .perks-grid { grid-template-columns: 1fr; gap: 1.25rem; max-width: 360px; margin: 0 auto; }
+  .perk { justify-content: flex-start; }
   .checkout-grid { grid-template-columns: 1fr; }
   .order-summary { position: static; order: -1; }
 }
@@ -1077,26 +1142,22 @@ body.bag-open { overflow: hidden; }
 
   .split { grid-template-columns: 1fr; }
   .product-detail { grid-template-columns: 1fr; }
-  .split-media { max-width: 480px; margin: 0 1.5rem 1.5rem 0; }
+  .split-media { max-width: 480px; }
   .split--reverse .split-media { order: -1; }
+
+  /* Phones and tablets: photo on top, text below */
+  .hero { min-height: 0; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-media { order: -1; }
+  .hero-media img { width: 100%; max-height: none; margin: 0 auto; }
 
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
 }
 
 @media (max-width: 600px) {
-  .hero {
-    align-items: flex-end;
-    background-position: 70% center;
-  }
-
-  .hero::before {
-    background: linear-gradient(0deg, rgba(10,10,10,0.97) 0%, rgba(10,10,10,0.75) 55%, rgba(10,10,10,0.35) 100%);
-  }
-
   .hero-actions .btn { flex: 1 1 100%; text-align: center; }
 
-  .scroll-cue { display: none; }
 
   .grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
 

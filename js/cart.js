@@ -169,7 +169,8 @@
       "</div>" +
       '<div class="bag-footer" data-bag-filled>' +
         '<div class="bag-total"><span>Subtotal</span><span data-bag-subtotal></span></div>' +
-        '<p class="bag-note">Pre-order: no payment is taken today. We will confirm availability, shipping and payment with you by email.</p>' +
+        '<div class="bag-total bag-total--muted"><span>Shipping</span><span>Free worldwide</span></div>' +
+        '<p class="bag-note">Pre-order: no payment is taken today. Every watch includes a 2-year warranty. We will confirm availability and payment with you by email.</p>' +
         '<a href="checkout.html" class="btn btn--solid bag-checkout">Checkout</a>' +
         '<button type="button" class="bag-continue" data-bag-close>Continue shopping</button>' +
       "</div>";
