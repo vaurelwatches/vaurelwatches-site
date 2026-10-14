@@ -7,7 +7,7 @@
   "use strict";
 
   var STORAGE_KEY = "vaurel-bag";
-  var ORDER_EMAIL = "hello@vaurelwatches.com"; // Where pre-orders are sent
+  var ORDER_EMAIL = "vaurelwatches@gmail.com"; // Where pre-orders are sent
   var money = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 
   /* ---------- Storage ---------- */
