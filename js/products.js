@@ -19,7 +19,7 @@
                  Named angles get a friendly label on the watch page: front, dial, side, back, wrist.
 
    Names and details follow the Vaurel men's and women's catalogues.
-   NOTE: prices are placeholders until real prices are set.
+   NOTE: every watch is $1,395 for now; set individual prices here later.
    ========================================================================== */
 window.VAUREL_PRODUCTS = [
   {
@@ -27,10 +27,10 @@ window.VAUREL_PRODUCTS = [
     name: "Emerald Green",
     collection: "men",
     type: "Automatic",
-    price: 2750,
+    price: 1395,
     featured: true,
     angles: ["front", "dial", "side", "back", "wrist"],
-    details: { Case: "Rose gold-tone stainless steel", Dial: "Green", Strap: "Genuine leather, green", Movement: "Automatic" },
+    details: { Case: "Rose gold-tone stainless steel", Dial: "Green", Strap: "Genuine leather, green", Movement: "Automatic", "Water resistance": "5 ATM (50 m)" },
     description: "A deep green dial framed in a warm rose gold-tone case, with Vaurel's signature V opening onto the automatic movement beneath. Finished on a green genuine leather strap."
   },
   {
@@ -38,10 +38,10 @@ window.VAUREL_PRODUCTS = [
     name: "Midnight Blue",
     collection: "men",
     type: "Automatic",
-    price: 2450,
+    price: 1395,
     featured: false,
     angles: ["front", "dial", "side", "back", "wrist"],
-    details: { Case: "Polished stainless steel", Dial: "Blue", Strap: "Genuine leather, blue", Movement: "Automatic" },
+    details: { Case: "Polished stainless steel", Dial: "Blue", Strap: "Genuine leather, blue", Movement: "Automatic", "Water resistance": "5 ATM (50 m)" },
     description: "A midnight blue dial in polished stainless steel, finished with a matching blue genuine leather strap."
   },
   {
@@ -49,10 +49,10 @@ window.VAUREL_PRODUCTS = [
     name: "Obsidian Black",
     collection: "men",
     type: "Automatic",
-    price: 2750,
+    price: 1395,
     featured: true,
     angles: ["front", "dial", "side", "back", "wrist"],
-    details: { Case: "Rose gold-tone stainless steel", Dial: "Black", Strap: "Genuine leather, black", Movement: "Automatic" },
+    details: { Case: "Rose gold-tone stainless steel", Dial: "Black", Strap: "Genuine leather, black", Movement: "Automatic", "Water resistance": "5 ATM (50 m)" },
     description: "A black dial in a rose gold-tone case on black genuine leather: the most classic pairing in the collection."
   },
   {
@@ -60,10 +60,10 @@ window.VAUREL_PRODUCTS = [
     name: "Silver Ivory",
     collection: "men",
     type: "Automatic",
-    price: 2450,
+    price: 1395,
     featured: false,
     angles: ["front", "dial", "side", "back", "wrist"],
-    details: { Case: "Polished stainless steel", Dial: "Silver", Strap: "Genuine leather, black", Movement: "Automatic" },
+    details: { Case: "Polished stainless steel", Dial: "Silver", Strap: "Genuine leather, black", Movement: "Automatic", "Water resistance": "5 ATM (50 m)" },
     description: "A bright silver dial in polished stainless steel on black genuine leather, crisp and understated."
   },
   {
@@ -71,10 +71,10 @@ window.VAUREL_PRODUCTS = [
     name: "Espresso Brown",
     collection: "men",
     type: "Automatic",
-    price: 2750,
+    price: 1395,
     featured: false,
     angles: ["front", "dial", "side", "back", "wrist"],
-    details: { Case: "Rose gold-tone stainless steel", Dial: "Brown", Strap: "Genuine leather, brown", Movement: "Automatic" },
+    details: { Case: "Rose gold-tone stainless steel", Dial: "Brown", Strap: "Genuine leather, brown", Movement: "Automatic", "Water resistance": "5 ATM (50 m)" },
     description: "A rich brown dial in a rose gold-tone case, paired with a brown genuine leather strap."
   },
   {
@@ -82,10 +82,10 @@ window.VAUREL_PRODUCTS = [
     name: "Blush Ivory",
     collection: "women",
     type: "Automatic",
-    price: 2450,
+    price: 1395,
     featured: false,
     angles: ["front", "dial", "side", "back", "wrist"],
-    details: { Case: "Polished stainless steel", Dial: "Ivory", Strap: "Genuine leather, blush", Movement: "Automatic" },
+    details: { Case: "Polished stainless steel", Dial: "Ivory", Strap: "Genuine leather, blush", Movement: "Automatic", "Water resistance": "5 ATM (50 m)" },
     description: "A soft ivory dial in polished stainless steel, paired with a blush genuine leather strap."
   },
   {
@@ -93,10 +93,10 @@ window.VAUREL_PRODUCTS = [
     name: "Rose Pink",
     collection: "women",
     type: "Automatic",
-    price: 2750,
+    price: 1395,
     featured: true,
     angles: ["front", "dial", "side", "back", "wrist"],
-    details: { Case: "Rose gold-tone stainless steel", Dial: "Rose pink", Strap: "Genuine leather, blush", Movement: "Automatic" },
+    details: { Case: "Rose gold-tone stainless steel", Dial: "Rose pink", Strap: "Genuine leather, blush", Movement: "Automatic", "Water resistance": "5 ATM (50 m)" },
     description: "A rose pink dial set in a warm rose gold-tone case, on a blush genuine leather strap."
   },
   {
@@ -104,10 +104,10 @@ window.VAUREL_PRODUCTS = [
     name: "Midnight Blue",
     collection: "women",
     type: "Automatic",
-    price: 2450,
+    price: 1395,
     featured: false,
     angles: ["front", "dial", "side", "back", "wrist"],
-    details: { Case: "Polished stainless steel", Dial: "Blue", Strap: "Genuine leather, blue", Movement: "Automatic" },
+    details: { Case: "Polished stainless steel", Dial: "Blue", Strap: "Genuine leather, blue", Movement: "Automatic", "Water resistance": "5 ATM (50 m)" },
     description: "A midnight blue dial in polished stainless steel, finished with a matching blue genuine leather strap."
   },
   {
@@ -115,10 +115,10 @@ window.VAUREL_PRODUCTS = [
     name: "Emerald Green",
     collection: "women",
     type: "Automatic",
-    price: 2750,
+    price: 1395,
     featured: false,
     angles: ["front", "dial", "side", "back", "wrist"],
-    details: { Case: "Rose gold-tone stainless steel", Dial: "Green", Strap: "Genuine leather, green", Movement: "Automatic" },
+    details: { Case: "Rose gold-tone stainless steel", Dial: "Green", Strap: "Genuine leather, green", Movement: "Automatic", "Water resistance": "5 ATM (50 m)" },
     description: "A deep green dial framed in a warm rose gold-tone case, with a matching green genuine leather strap."
   },
   {
@@ -126,10 +126,10 @@ window.VAUREL_PRODUCTS = [
     name: "Espresso Brown",
     collection: "women",
     type: "Automatic",
-    price: 2750,
+    price: 1395,
     featured: false,
     angles: ["front", "dial", "side", "back", "wrist"],
-    details: { Case: "Rose gold-tone stainless steel", Dial: "Brown", Strap: "Genuine leather, brown", Movement: "Automatic" },
+    details: { Case: "Rose gold-tone stainless steel", Dial: "Brown", Strap: "Genuine leather, brown", Movement: "Automatic", "Water resistance": "5 ATM (50 m)" },
     description: "A rich brown dial in a rose gold-tone case, paired with a brown genuine leather strap."
   }
 ];

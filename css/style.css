@@ -11,10 +11,11 @@
   --white: #ffffff;
   --ivory: #f7f5f0;
   --grey: #8c8c8c;
-  --gold: #c9a24b;
-  --gold-light: #e9d39a;
-  --gold-dark: #8a6a2a;
-  --photo-bg: #d6d5d4; /* matches the light grey studio background of the watch photos */
+  /* Accent colour: rose gold, matched to the rose gold-tone watch cases */
+  --gold: #d29d85;
+  --gold-light: #e8c3ae;
+  --gold-dark: #a06c58;
+  --photo-bg: #0f0d0d; /* matches the dark background of the watch photos */
 
   --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --font-body: "Montserrat", "Helvetica Neue", Arial, sans-serif;
@@ -125,7 +126,7 @@ p { margin: 0 0 1.25rem; }
   inset: 0 0 auto 0;
   z-index: 100;
   height: var(--header-height);
-  border-bottom: 1px solid rgba(201, 162, 75, 0.15);
+  border-bottom: 1px solid rgba(210, 157, 133, 0.15);
 }
 
 /* The blur sits on a pseudo-element: a backdrop-filter on the header itself
@@ -270,10 +271,13 @@ p { margin: 0 0 1.25rem; }
   min-height: 100svh;
   display: flex;
   align-items: center;
-  padding: calc(var(--header-height) + 2rem) 0 3rem;
+  flex-direction: column;
+  padding: calc(var(--header-height) + 2rem) 0 0;
   background: var(--black);
   overflow: hidden;
 }
+
+.hero > .container { flex: 1; align-content: center; padding-bottom: 2.5rem; }
 
 /* Text on the left, the full photo on the right */
 .hero-grid {
@@ -312,41 +316,6 @@ p { margin: 0 0 1.25rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
 
 
-/* ---------- Highlights band (Home) ---------- */
-.perks {
-  border-top: 1px solid var(--black-line);
-  border-bottom: 1px solid var(--black-line);
-  background: var(--black-soft);
-  padding: 2.25rem 0;
-}
-
-.perks-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-
-.perk {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.perk h2 {
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--white);
-  margin: 0 0 0.25rem;
-}
-
-.perk p { font-size: 0.85rem; color: var(--grey); margin: 0; }
-
-.icon--lg { stroke-width: 1.1; }
-
 /* Shipping and warranty under the price on watch pages */
 .product-perks {
   list-style: none;
@@ -378,19 +347,71 @@ p { margin: 0 0 1.25rem; }
 .policy ul, .policy ol { padding-left: 1.2rem; margin: 0 0 1.25rem; }
 .policy li { margin-bottom: 0.5rem; }
 .policy li::marker { color: var(--gold); }
-.policy a, .contact-item p a, .order-summary .bag-total a { color: var(--gold); border-bottom: 1px solid rgba(201, 162, 75, 0.4); }
+.policy a, .contact-item p a, .order-summary .bag-total a { color: var(--gold); border-bottom: 1px solid rgba(210, 157, 133, 0.4); }
 .policy-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 0 3rem; }
 
-/* Links inside the highlights band and watch-page perks */
-.perk h2 a, .product-perks a { transition: color 0.3s ease; }
-.perk h2 a:hover, .product-perks a:hover { color: var(--gold); }
+/* Links in the watch-page perks */
+.product-perks a { transition: color 0.3s ease; }
+.product-perks a:hover { color: var(--gold); }
+
+/* ---------- Scrolling banner along the bottom of the hero ---------- */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid var(--black-line);
+  background: var(--black-soft);
+  padding: 1.1rem 0;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 45s linear infinite;
+}
+
+.marquee:hover .marquee-track { animation-play-state: paused; }
+
+.marquee-group {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.marquee-group li {
+  display: flex;
+  align-items: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  white-space: nowrap;
+}
+
+/* Small rose gold diamond between items */
+.marquee-group li::after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  margin: 0 2.5rem;
+  background: var(--gold);
+  transform: rotate(45deg);
+}
+
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
 
 /* ---------- Page header (inner pages) ---------- */
 .page-hero {
   padding: calc(var(--header-height) + clamp(4rem, 10vw, 7rem)) 0 clamp(3rem, 7vw, 5rem);
   text-align: center;
   border-bottom: 1px solid var(--black-line);
-  background: radial-gradient(ellipse at top, #1c1810 0%, var(--black) 70%);
+  background: radial-gradient(ellipse at top, #1e1513 0%, var(--black) 70%);
 }
 
 .page-hero h1 { font-size: clamp(2.5rem, 7vw, 4.5rem); font-weight: 300; }
@@ -489,7 +510,7 @@ p { margin: 0 0 1.25rem; }
 }
 
 .product:hover {
-  border-color: rgba(201, 162, 75, 0.6);
+  border-color: rgba(210, 157, 133, 0.6);
   transform: translateY(-4px);
 }
 
@@ -651,7 +672,7 @@ p { margin: 0 0 1.25rem; }
 
 .spec-list div {
   display: grid;
-  grid-template-columns: 8rem 1fr;
+  grid-template-columns: 10.5rem 1fr;
   gap: 1rem;
   padding: 1rem 0;
   border-bottom: 1px solid var(--black-line);
@@ -674,7 +695,7 @@ p { margin: 0 0 1.25rem; }
 .cta {
   text-align: center;
   border-top: 1px solid var(--black-line);
-  background: radial-gradient(ellipse at center, #1c1810 0%, var(--black) 70%);
+  background: radial-gradient(ellipse at center, #1e1513 0%, var(--black) 70%);
 }
 
 .cta p {
@@ -707,7 +728,7 @@ p { margin: 0 0 1.25rem; }
 .contact-item p,
 .contact-item a { color: rgba(255, 255, 255, 0.8); margin: 0; }
 
-.contact-item a { border-bottom: 1px solid rgba(201, 162, 75, 0.4); transition: color 0.3s ease; }
+.contact-item a { border-bottom: 1px solid rgba(210, 157, 133, 0.4); transition: color 0.3s ease; }
 .contact-item a:hover { color: var(--gold); }
 
 .form {
@@ -801,7 +822,7 @@ body.bag-open { overflow: hidden; }
   display: flex;
   flex-direction: column;
   background: var(--black-soft);
-  border-left: 1px solid rgba(201, 162, 75, 0.25);
+  border-left: 1px solid rgba(210, 157, 133, 0.25);
   transform: translateX(100%);
   visibility: hidden;
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.45s;
@@ -1010,7 +1031,7 @@ body.bag-open { overflow: hidden; }
   position: sticky;
   top: calc(var(--header-height) + 2rem);
   padding: clamp(1.5rem, 4vw, 2.5rem);
-  border: 1px solid rgba(201, 162, 75, 0.35);
+  border: 1px solid rgba(210, 157, 133, 0.35);
 }
 
 .order-summary .bag-items { margin-bottom: 1.5rem; }
@@ -1018,7 +1039,7 @@ body.bag-open { overflow: hidden; }
 
 .checkout-done:focus { outline: none; }
 .checkout-done p { color: rgba(255, 255, 255, 0.8); }
-.checkout-done a { color: var(--gold); border-bottom: 1px solid rgba(201, 162, 75, 0.4); }
+.checkout-done a { color: var(--gold); border-bottom: 1px solid rgba(210, 157, 133, 0.4); }
 
 .checkout-empty { padding: 2rem 0; }
 .checkout-empty p { color: rgba(255, 255, 255, 0.7); margin-bottom: 2rem; }
@@ -1043,7 +1064,7 @@ body.bag-open { overflow: hidden; }
 
 /* On the Contact page the underline sits under the text only */
 .contact-item a.icon-link { border-bottom: 0; }
-.contact-item a.icon-link span { border-bottom: 1px solid rgba(201, 162, 75, 0.4); }
+.contact-item a.icon-link span { border-bottom: 1px solid rgba(210, 157, 133, 0.4); }
 
 /* ---------- Footer ---------- */
 .site-footer {
@@ -1104,8 +1125,6 @@ body.bag-open { overflow: hidden; }
   .features { grid-template-columns: 1fr; gap: 2.5rem; max-width: 480px; margin-left: auto; margin-right: auto; }
   .contact-grid { grid-template-columns: 1fr; }
   .policy-columns { grid-template-columns: 1fr; }
-  .perks-grid { grid-template-columns: 1fr; gap: 1.25rem; max-width: 360px; margin: 0 auto; }
-  .perk { justify-content: flex-start; }
   .checkout-grid { grid-template-columns: 1fr; }
   .order-summary { position: static; order: -1; }
 }
