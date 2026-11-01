@@ -30,7 +30,11 @@ The Home page hero photo is `images/hero.jpg`, with a smaller `images/hero-sm.jp
 
 **Text and contact details.** The brand story is on the Home and About pages. Contact details (email `vaurelwatches@gmail.com`, phone) are on the Contact page and in every footer. Pre-orders are emailed to the address set as `ORDER_EMAIL` in `js/cart.js`.
 
-**Colours & fonts.** Edit the variables at the top of `css/style.css` (`--gold`, `--black`, etc.).
+**Colours & fonts.** Edit the variables at the top of `css/style.css`. The accent colour `--gold` is set to rose gold (`#d29d85`), matched to the rose gold-tone watch cases.
+
+**Scrolling banner.** The highlights that scroll along the bottom of the Home hero are two identical lists in `index.html` (search for `marquee`). Edit both lists the same way.
+
+**Watch photo backgrounds.** The front photos on the site are web copies with the studio background replaced by a dark background. The untouched originals are in `photos/originals/`.
 
 ## Shopping bag and checkout
 
@@ -40,7 +44,7 @@ To change where orders are sent, edit `ORDER_EMAIL` at the top of `js/cart.js`. 
 
 ## Making sure visitors see your latest changes
 
-Each page loads `css/style.css?v=13` and `js/...js?v=13`. After changing the CSS or JavaScript files, raise that number in every `.html` file (e.g. to `?v=14`). Browsers then fetch the new files instead of mixing in old saved copies.
+Each page loads `css/style.css?v=14` and `js/...js?v=14`. After changing the CSS or JavaScript files, raise that number in every `.html` file (e.g. to `?v=15`). Browsers then fetch the new files instead of mixing in old saved copies.
 
 ## Contact form
 
