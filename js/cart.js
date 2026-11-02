@@ -37,7 +37,7 @@
           name: product.name,
           variant: product.collection === "women" ? "Women\u2019s" : "Men\u2019s",
           price: product.price,
-          image: "images/watches/" + product.id + "/" + product.angles[0] + "-sm.jpg",
+          image: "images/watches/" + product.id + "/" + product.angles[0] + "-sm.jpg?v=" + (window.VAUREL_PHOTO_VERSION || 1),
           qty: item.qty
         });
       }
