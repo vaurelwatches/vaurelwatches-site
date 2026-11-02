@@ -11,10 +11,13 @@
   --white: #ffffff;
   --ivory: #f7f5f0;
   --grey: #8c8c8c;
-  /* Accent colour: rose gold, matched to the rose gold-tone watch cases */
-  --gold: #d29d85;
-  --gold-light: #e8c3ae;
-  --gold-dark: #a06c58;
+  /* Accent colour: rose gold, measured from the Vaurel logo artwork.
+     --gold is the logo's median tone; the gradient reproduces its metallic sheen. */
+  --gold: #edbea3;
+  --gold-light: #fce4d0;
+  --gold-dark: #dca991;
+  --gold-gradient: linear-gradient(135deg, #dca991 0%, #e3ad94 28%, #edbea3 52%, #fce4d0 74%, #e3ad94 100%);
+  --marquee-height: 3.4rem;
   --photo-bg: #0f0d0d; /* matches the dark background of the watch photos */
 
   --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
@@ -108,7 +111,8 @@ p { margin: 0 0 1.25rem; }
 }
 
 .btn--solid {
-  background: var(--gold);
+  background: var(--gold-gradient);
+  border-color: var(--gold);
   color: var(--black);
 }
 
@@ -116,6 +120,7 @@ p { margin: 0 0 1.25rem; }
 .btn--solid:focus-visible {
   background: var(--gold-light);
   border-color: var(--gold-light);
+  color: var(--black);
 }
 
 :focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
@@ -126,7 +131,7 @@ p { margin: 0 0 1.25rem; }
   inset: 0 0 auto 0;
   z-index: 100;
   height: var(--header-height);
-  border-bottom: 1px solid rgba(210, 157, 133, 0.15);
+  border-bottom: 1px solid rgba(237, 190, 163, 0.15);
 }
 
 /* The blur sits on a pseudo-element: a backdrop-filter on the header itself
@@ -153,6 +158,10 @@ p { margin: 0 0 1.25rem; }
   font-size: 1.75rem;
   letter-spacing: 0.4em;
   color: var(--gold);
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   /* Optical balance for the trailing letter-spacing */
   margin-right: -0.4em;
 }
@@ -272,12 +281,12 @@ p { margin: 0 0 1.25rem; }
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: calc(var(--header-height) + 2rem) 0 0;
+  padding: calc(var(--header-height) + 1.25rem) 0 0;
   background: var(--black);
   overflow: hidden;
 }
 
-.hero > .container { flex: 1; align-content: center; padding-bottom: 2.5rem; }
+.hero > .container { flex: 1; align-content: center; padding-bottom: 1.5rem; }
 
 /* Text on the left, the full photo on the right */
 .hero-grid {
@@ -294,7 +303,8 @@ p { margin: 0 0 1.25rem; }
   width: auto;
   max-width: 100%;
   height: auto;
-  max-height: calc(100svh - var(--header-height) - 5rem);
+  /* leave room for the header, spacing and the scrolling banner */
+  max-height: calc(100svh - var(--header-height) - 2.75rem - var(--marquee-height));
   margin-left: auto;
 }
 
@@ -347,20 +357,30 @@ p { margin: 0 0 1.25rem; }
 .policy ul, .policy ol { padding-left: 1.2rem; margin: 0 0 1.25rem; }
 .policy li { margin-bottom: 0.5rem; }
 .policy li::marker { color: var(--gold); }
-.policy a, .contact-item p a, .order-summary .bag-total a { color: var(--gold); border-bottom: 1px solid rgba(210, 157, 133, 0.4); }
+.policy a, .contact-item p a, .order-summary .bag-total a { color: var(--gold); border-bottom: 1px solid rgba(237, 190, 163, 0.4); }
 .policy-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 0 3rem; }
 
 /* Links in the watch-page perks */
 .product-perks a { transition: color 0.3s ease; }
 .product-perks a:hover { color: var(--gold); }
 
+/* Shorter laptop screens: tighter hero text so the banner stays on the first screen */
+@media (min-width: 821px) and (max-height: 860px) {
+  .hero h1 { font-size: clamp(3rem, 9vh, 5rem); margin-bottom: 1rem; }
+  .hero p { margin-bottom: 1.75rem; }
+  .hero .eyebrow { margin-bottom: 0.75rem; }
+  .hero-actions .btn { padding: 0.85rem 2.25rem; }
+}
+
 /* ---------- Scrolling banner along the bottom of the hero ---------- */
 .marquee {
   width: 100%;
+  height: var(--marquee-height);
+  display: flex;
+  align-items: center;
   overflow: hidden;
   border-top: 1px solid var(--black-line);
   background: var(--black-soft);
-  padding: 1.1rem 0;
 }
 
 .marquee-track {
@@ -510,7 +530,7 @@ p { margin: 0 0 1.25rem; }
 }
 
 .product:hover {
-  border-color: rgba(210, 157, 133, 0.6);
+  border-color: rgba(237, 190, 163, 0.6);
   transform: translateY(-4px);
 }
 
@@ -728,7 +748,7 @@ p { margin: 0 0 1.25rem; }
 .contact-item p,
 .contact-item a { color: rgba(255, 255, 255, 0.8); margin: 0; }
 
-.contact-item a { border-bottom: 1px solid rgba(210, 157, 133, 0.4); transition: color 0.3s ease; }
+.contact-item a { border-bottom: 1px solid rgba(237, 190, 163, 0.4); transition: color 0.3s ease; }
 .contact-item a:hover { color: var(--gold); }
 
 .form {
@@ -822,7 +842,7 @@ body.bag-open { overflow: hidden; }
   display: flex;
   flex-direction: column;
   background: var(--black-soft);
-  border-left: 1px solid rgba(210, 157, 133, 0.25);
+  border-left: 1px solid rgba(237, 190, 163, 0.25);
   transform: translateX(100%);
   visibility: hidden;
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.45s;
@@ -1031,7 +1051,7 @@ body.bag-open { overflow: hidden; }
   position: sticky;
   top: calc(var(--header-height) + 2rem);
   padding: clamp(1.5rem, 4vw, 2.5rem);
-  border: 1px solid rgba(210, 157, 133, 0.35);
+  border: 1px solid rgba(237, 190, 163, 0.35);
 }
 
 .order-summary .bag-items { margin-bottom: 1.5rem; }
@@ -1039,7 +1059,7 @@ body.bag-open { overflow: hidden; }
 
 .checkout-done:focus { outline: none; }
 .checkout-done p { color: rgba(255, 255, 255, 0.8); }
-.checkout-done a { color: var(--gold); border-bottom: 1px solid rgba(210, 157, 133, 0.4); }
+.checkout-done a { color: var(--gold); border-bottom: 1px solid rgba(237, 190, 163, 0.4); }
 
 .checkout-empty { padding: 2rem 0; }
 .checkout-empty p { color: rgba(255, 255, 255, 0.7); margin-bottom: 2rem; }
@@ -1064,7 +1084,7 @@ body.bag-open { overflow: hidden; }
 
 /* On the Contact page the underline sits under the text only */
 .contact-item a.icon-link { border-bottom: 0; }
-.contact-item a.icon-link span { border-bottom: 1px solid rgba(210, 157, 133, 0.4); }
+.contact-item a.icon-link span { border-bottom: 1px solid rgba(237, 190, 163, 0.4); }
 
 /* ---------- Footer ---------- */
 .site-footer {

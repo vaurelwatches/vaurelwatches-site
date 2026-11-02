@@ -133,3 +133,7 @@ window.VAUREL_PRODUCTS = [
     description: "A rich brown dial in a rose gold-tone case, paired with a brown genuine leather strap."
   }
 ];
+
+// Photo version: raise this number whenever you replace watch photos (keeping the same
+// file names), so visitors' browsers load the new photos instead of saved old copies.
+window.VAUREL_PHOTO_VERSION = 2;

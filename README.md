@@ -44,7 +44,7 @@ To change where orders are sent, edit `ORDER_EMAIL` at the top of `js/cart.js`. 
 
 ## Making sure visitors see your latest changes
 
-Each page loads `css/style.css?v=14` and `js/...js?v=14`. After changing the CSS or JavaScript files, raise that number in every `.html` file (e.g. to `?v=15`). Browsers then fetch the new files instead of mixing in old saved copies.
+Each page loads `css/style.css?v=15` and `js/...js?v=15`. After changing the CSS or JavaScript files, raise that number in every `.html` file (e.g. to `?v=16`). Browsers then fetch the new files instead of mixing in old saved copies. When you replace watch photos but keep the same file names, also raise `VAUREL_PHOTO_VERSION` at the bottom of `js/products.js`.
 
 ## Contact form
 

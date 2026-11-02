@@ -22,7 +22,7 @@
   }
 
   function photo(product, angle, small) {
-    return "images/watches/" + product.id + "/" + angle + (small ? "-sm" : "") + ".jpg";
+    return "images/watches/" + product.id + "/" + angle + (small ? "-sm" : "") + ".jpg?v=" + (window.VAUREL_PHOTO_VERSION || 1);
   }
 
   function collectionLabel(product) {
